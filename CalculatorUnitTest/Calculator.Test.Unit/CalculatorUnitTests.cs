@@ -52,6 +52,15 @@ namespace Calculator.Test.Unit
         {
             Assert.That(uut.Power(a,b), Is.EqualTo(c));
         }
+
+        [TestCase(2, 0, double.NaN)]
+        [TestCase(2, 2, 1)]
+
+        public void Divide(double a, double b, double c)
+        {
+            Assert.That(uut.Divide(a,b), Is.EqualTo(c));
+        }
+    }
         
         /*[Test]
         public void Power_Pow2And0_Returns1()
@@ -60,6 +69,4 @@ namespace Calculator.Test.Unit
         } 
         Testen kan laves således, men det kan gøres kortere med TestCase*/
 
-      
-    }
 }

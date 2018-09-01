@@ -27,5 +27,15 @@ namespace Calculator
         {
             return Math.Pow(x, exp);
         }
+
+        public double Divide(double dividend, double divisor)
+        {
+            if (divisor == 0)
+            {
+                return Double.NaN;
+            }
+
+            return dividend / divisor;
+        }
     }
 }
