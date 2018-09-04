@@ -18,7 +18,7 @@ namespace Calculator
             Accumulator = result;
             return result; 
         }
-        // HEJ
+        
         public double Subtract(double a, double b)
         {
             double result = a - b;
@@ -45,14 +45,27 @@ namespace Calculator
 
         public double Divide(double dividend, double divisor)
         {
-            if (divisor == 0)
+            //if (divisor == 0)
+            //{
+            //    return Double.NaN;
+            //}
+
+            //double result = dividend / divisor;
+            //Accumulator = result;
+            //return result;
+
+            try
+            {
+                double result = dividend / divisor;
+                Accumulator = result;
+                return result;
+
+            } catch(Exception e) when (divisor == 0)
             {
                 return Double.NaN;
+                throw e;
             }
-
-            double result = dividend / divisor;
-            Accumulator = result;
-            return result;
+            
         }
 
         public double Sqrt(double a)
