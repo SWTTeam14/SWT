@@ -64,6 +64,24 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Divide(a,b), Is.EqualTo(c));
         }
 
+        [TestCase(4,2)]
+        [TestCase(49,7)]
+        [TestCase(0,0)]
+        public void Sqrt(double a, double b)
+        {
+            Assert.That(uut.Sqrt(a), Is.EqualTo(b));
+        }
+
+        [Test]
+        public void SqrtException()
+        {
+            Assert.Throws<Exception>(() => uut.Sqrt(-5));
+        }
+
+        // Testing exception
+
+
+
         [TestCase(6, 4, 10)]
         public void AccumulateAddition(double a, double b, double c)
         {
