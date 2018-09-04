@@ -33,7 +33,7 @@ namespace Calculator
             return result;
         }
 
-        public double Power(double x, double exp)
+        public double Power(double x, double exp)¨¨
         {
             
                 double result = Math.Pow(x, exp);
@@ -53,19 +53,19 @@ namespace Calculator
             //double result = dividend / divisor;
             //Accumulator = result;
             //return result;
-
+            double result = 0;
             try
             {
-                double result = dividend / divisor;
+                result = dividend / divisor;
                 Accumulator = result;
-                return result;
+                
 
             } catch(Exception e) when (divisor == 0)
             {
                 return Double.NaN;
                 throw e;
             }
-            
+            return result;
         }
 
         public double Sqrt(double a)
