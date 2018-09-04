@@ -107,7 +107,7 @@ namespace Calculator.Test.Unit
         [TestCase(10, 5, 50, 2)]
         public void AccumulateAll(double a, double b, double c, double d)
         {
-            Assert.That(uut.Add(b, d), Is.EqualTo(a));
+            Assert.That(uut.Add(b, b), Is.EqualTo(a));
             Assert.That(uut.AcMultiply(b), Is.EqualTo(c));
             Assert.That(uut.AcDivide(b), Is.EqualTo(a));
             Assert.That(uut.AcSubstract(b), Is.EqualTo(b));
