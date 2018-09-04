@@ -4,6 +4,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 
 
 namespace Calculator
@@ -16,14 +17,14 @@ namespace Calculator
         {
             double result = a + b;
             Accumulator = result;
-            return result; 
+            return result;
         }
-        
+
         public double Subtract(double a, double b)
         {
             double result = a - b;
             Accumulator = result;
-            return result;  
+            return result;
         }
 
         public double Multiply(double a, double b)
@@ -35,22 +36,24 @@ namespace Calculator
 
         public double Power(double x, double exp)
         {
-            
-                double result = Math.Pow(x, exp);
-                Accumulator = result;
-                return result;
+
+            double result = Math.Pow(x, exp);
+            Accumulator = result;
+            return result;
         }
 
         public double Divide(double dividend, double divisor)
         {
             if (divisor == 0)
             {
-                return Double.NaN;
+                Clear();
+                throw new Exception("");
+
             }
 
             double result = dividend / divisor;
             Accumulator = result;
-            return result;            
+            return result;
         }
 
         public double Sqrt(double a)
@@ -63,8 +66,6 @@ namespace Calculator
             double result = Math.Sqrt(a);
             Accumulator = result;
             return result;
-            
-
         }
 
         public double Accumulator
@@ -75,9 +76,6 @@ namespace Calculator
                 _accumulator = value;
             }
         }
-
-
-
 
         public void Clear()
         {
