@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Calculator
 {
     public class Calculator
@@ -13,7 +14,9 @@ namespace Calculator
 
         public double Add(double a, double b)
         {
-            return a + b; 
+            double result = a + b;
+            Accumulator = result;
+            return result; 
         }
         
         public double Subtract(double a, double b)
@@ -65,6 +68,20 @@ namespace Calculator
             
         }
 
+        public double Sqrt(double a)
+        {
+            if (a < 0)
+            {
+                Clear();
+                throw new Exception("Cant take sqrt of a negative number. ");
+            }
+            double result = Math.Sqrt(a);
+            Accumulator = result;
+            return result;
+            
+
+        }
+
         public double Accumulator
         {
             get { return _accumulator; }
@@ -73,6 +90,8 @@ namespace Calculator
                 _accumulator = value;
             }
         }
+
+
 
 
         public void Clear()
@@ -103,6 +122,11 @@ namespace Calculator
         public double AcPower(double exponent)
         {
             return Power(Accumulator, exponent);
+        }
+
+        public double AcSqrt()
+        {
+            return Sqrt(Accumulator);
         }
     }
 }
