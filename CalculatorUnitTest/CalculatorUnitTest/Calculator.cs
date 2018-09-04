@@ -58,6 +58,7 @@ namespace Calculator
             }
         }
 
+
         public void Clear()
         {
             Accumulator = 0;

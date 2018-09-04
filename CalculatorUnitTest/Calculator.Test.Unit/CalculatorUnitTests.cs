@@ -50,7 +50,6 @@ namespace Calculator.Test.Unit
         [TestCase(-2, -4, 0.0625)]
         [TestCase(0,1,0)]
         [TestCase(2,0,1)]
-
         public void Power(double a, double b, double c)
         {
             Assert.That(uut.Power(a,b), Is.EqualTo(c));
@@ -63,6 +62,17 @@ namespace Calculator.Test.Unit
         public void Divide(double a, double b, double c)
         {
             Assert.That(uut.Divide(a,b), Is.EqualTo(c));
+        }
+      
+        [TestCase()]
+        public void Accumulate()
+        {
+            
+        }
+
+        public void Clear()
+        {
+            
         }
     }
         
