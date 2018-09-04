@@ -13,7 +13,9 @@ namespace Calculator
 
         public double Add(double a, double b)
         {
-            return a + b; 
+            double result = a + b;
+            Accumulator = result;
+            return result; 
         }
         // HEJ
         public double Subtract(double a, double b)
