@@ -132,5 +132,7 @@ namespace Calculator.Test.Unit
             Assert.That(uut.AcPower(d), Is.EqualTo(25));
         }
 
+
+
     }
 }
