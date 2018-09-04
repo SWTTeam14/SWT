@@ -88,20 +88,20 @@ namespace Calculator.Test.Unit
             Assert.That(uut.AcMultiply(2), Is.EqualTo(1400));
         }
 
-        [TestCase(25, 5, 5)]
+        [TestCase(25, 25, 5)]
         public void AccumulateDivision(double a, double b, double c)
         {
-            Assert.That(uut.Divide(b, c), Is.EqualTo(1));
-            Assert.That(uut.AcDivide(a), Is.EqualTo(25));
-            Assert.That(uut.AcDivide(b), Is.EqualTo(c));
+            Assert.That(uut.Divide(b, c), Is.EqualTo(5));
+            Assert.That(uut.AcDivide(c), Is.EqualTo(1));
+            Assert.That(uut.AcDivide(a), Is.EqualTo(0.04));
         }
 
-        [TestCase(3, 3, 9)]
+        [TestCase(3, 3, 27)]
         public void AccumulatePower(double a, double b, double c)
         {
             Assert.That(uut.Power(a, b), Is.EqualTo(c));
-            Assert.That(uut.AcPower(a), Is.EqualTo(729));
-            Assert.That(uut.AcPower(2), Is.EqualTo(531441));
+            Assert.That(uut.AcPower(a), Is.EqualTo(19683));
+            Assert.That(uut.AcPower(2), Is.EqualTo(387420489));
         }
 
         [TestCase(10, 5, 50, 2)]
