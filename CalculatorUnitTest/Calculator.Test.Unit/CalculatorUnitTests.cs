@@ -63,14 +63,56 @@ namespace Calculator.Test.Unit
         {
             Assert.That(uut.Divide(a,b), Is.EqualTo(c));
         }
-      
-        [TestCase(25, 5, 5, 25)]
-        [TestCase(10, 5, 2, 4)]
-        public void Accumulate(double a, double b, double c, double d)
+
+        [TestCase(6, 4, 10)]
+        public void AccumulateAddition(double a, double b, double c)
         {
-            Assert.That(uut.Divide(a, b), Is.EqualTo(c));
-            Assert.That(uut.AcMultiply(c), Is.EqualTo(d));
+            Assert.That(uut.Add(a, b), Is.EqualTo(c));
+            Assert.That(uut.AcAdd(a), Is.EqualTo(16));
+            Assert.That(uut.AcAdd(a), Is.EqualTo(22));
+        }
+
+        [TestCase(8, 2, 6)]
+        public void AccumulateSubstraction(double a, double b, double c)
+        {
+            Assert.That(uut.Subtract(a, b), Is.EqualTo(c));
+            Assert.That(uut.AcSubstract(b), Is.EqualTo(4));
+            Assert.That(uut.AcSubstract(c), Is.EqualTo(-2));
         }
         
+        [TestCase(10, 7, 70)]
+        public void AccumulateMultiplication(double a, double b, double c)
+        {
+            Assert.That(uut.Multiply(a, b), Is.EqualTo(c));
+            Assert.That(uut.AcMultiply(a), Is.EqualTo(700));
+            Assert.That(uut.AcMultiply(2), Is.EqualTo(1400));
+        }
+
+        [TestCase(25, 5, 5)]
+        public void AccumulateDivision(double a, double b, double c)
+        {
+            Assert.That(uut.Divide(b, c), Is.EqualTo(1));
+            Assert.That(uut.AcDivide(a), Is.EqualTo(25));
+            Assert.That(uut.AcDivide(b), Is.EqualTo(c));
+        }
+
+        [TestCase(3, 3, 9)]
+        public void AccumulatePower(double a, double b, double c)
+        {
+            Assert.That(uut.Power(a, b), Is.EqualTo(c));
+            Assert.That(uut.AcPower(a), Is.EqualTo(729));
+            Assert.That(uut.AcPower(2), Is.EqualTo(531441));
+        }
+
+        [TestCase(10, 5, 50, 2)]
+        public void AccumulateAll(double a, double b, double c, double d)
+        {
+            Assert.That(uut.Add(b, d), Is.EqualTo(a));
+            Assert.That(uut.AcMultiply(b), Is.EqualTo(c));
+            Assert.That(uut.AcDivide(b), Is.EqualTo(a));
+            Assert.That(uut.AcSubstract(b), Is.EqualTo(b));
+            Assert.That(uut.AcPower(d), Is.EqualTo(25));
+        }
+
     }
 }
