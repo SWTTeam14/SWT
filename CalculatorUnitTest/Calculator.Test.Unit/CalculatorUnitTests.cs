@@ -20,14 +20,16 @@ namespace Calculator.Test.Unit
 
         [TestCase(2,2,4)] 
         [TestCase(-2,-4,-6)]
+        [TestCase(0,0,0)]
         public void Addition(double a, double b, double c)
         {
-            //var uut = new Calculator(); Dette er erstattet med ovenstående
+            
             Assert.That(uut.Add(a,b), Is.EqualTo(c));
         }
 
         [TestCase(5,3,2)]
         [TestCase(-5,-2,-3)]
+        [TestCase(0,0,0)]
         public void Subtract(double a, double b, double c)
         {
             
@@ -56,6 +58,7 @@ namespace Calculator.Test.Unit
 
         [TestCase(2, 0, double.NaN)]
         [TestCase(2, 2, 1)]
+        [TestCase(10, 2, 5)]
 
         public void Divide(double a, double b, double c)
         {
@@ -63,11 +66,6 @@ namespace Calculator.Test.Unit
         }
     }
         
-        /*[Test]
-        public void Power_Pow2And0_Returns1()
-        {
-            Assert.That(uut.Power(2, 0), Is.EqualTo(1));
-        } 
-        Testen kan laves således, men det kan gøres kortere med TestCase*/
+        
 
 }
