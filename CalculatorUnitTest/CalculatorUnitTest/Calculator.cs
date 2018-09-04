@@ -45,27 +45,21 @@ namespace Calculator
 
         public double Divide(double dividend, double divisor)
         {
-            //if (divisor == 0)
-            //{
-            //    return Double.NaN;
-            //}
-
-            //double result = dividend / divisor;
-            //Accumulator = result;
-            //return result;
-            double result = 0;
-            try
+            if (divisor == 0)
             {
-                result = dividend / divisor;
-                Accumulator = result;
-                
+                return Double.NaN;
+            }
+
+            double result = dividend / divisor;
+            Accumulator = result;
+            return result;
 
             } catch(Exception e) when (divisor == 0)
             {
                 return Double.NaN;
                 throw e;
             }
-            return result;
+            
         }
 
         public double Sqrt(double a)
