@@ -62,6 +62,7 @@ namespace Calculator.Test.Unit
         public void Divide(double a, double b, double c)
         {
             Assert.That(uut.Divide(a,b), Is.EqualTo(c));
+            Assert.Throws<Exception>(() => uut.Divide(a,b));
         }
 
         [TestCase(6, 4, 10)]
