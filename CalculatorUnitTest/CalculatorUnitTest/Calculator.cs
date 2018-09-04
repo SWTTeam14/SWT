@@ -11,12 +11,9 @@ namespace Calculator
         public double Add(double a, double b)
         {
             return a + b; 
-            //Derp
-            //Test              
+                        
         }
-        // HEJ RASMUS
-        //HEJ!
-        // TESTEST
+        
         public double Subtract(double a, double b)
         {
             return a - b; 
