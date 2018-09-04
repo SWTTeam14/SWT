@@ -64,11 +64,12 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Divide(a,b), Is.EqualTo(c));
         }
       
-        [TestCase(25, 5, 5)]
-        public void Accumulate(double a, double b, double c)
+        [TestCase(25, 5, 5, 25)]
+        [TestCase(10, 5, 2, 4)]
+        public void Accumulate(double a, double b, double c, double d)
         {
             Assert.That(uut.Divide(a, b), Is.EqualTo(c));
-            Assert.That(uut.AcMultiply(c), Is.EqualTo(a));
+            Assert.That(uut.AcMultiply(c), Is.EqualTo(d));
         }
         
     }
