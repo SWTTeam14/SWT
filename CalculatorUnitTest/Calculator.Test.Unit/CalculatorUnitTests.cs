@@ -21,6 +21,8 @@ namespace Calculator.Test.Unit
         [TestCase(2,2,4)] 
         [TestCase(-2,-4,-6)]
         [TestCase(0,0,0)]
+        [TestCase(0,2,2)]
+        
         public void Addition(double a, double b, double c)
         {
             
