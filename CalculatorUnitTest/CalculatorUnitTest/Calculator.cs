@@ -12,6 +12,7 @@ namespace Calculator
         {
             return a + b; 
             //Derp
+            //Test              
         }
         // HEJ RASMUS
         //HEJ!
