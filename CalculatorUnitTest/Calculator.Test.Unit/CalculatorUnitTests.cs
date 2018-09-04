@@ -68,7 +68,7 @@ namespace Calculator.Test.Unit
         public void AccumulateAddition(double a, double b, double c)
         {
             Assert.That(uut.Add(a, b), Is.EqualTo(c));
-            Assert.That(uut.AcAdd(c), Is.EqualTo(16));
+            Assert.That(uut.AcAdd(a), Is.EqualTo(16));
             Assert.That(uut.AcAdd(a), Is.EqualTo(22));
         }
 
