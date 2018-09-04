@@ -14,8 +14,8 @@ namespace Calculator
         }
         // HEJ RASMUS
         //HEJ!
-
-        public double Subtract(double a, double b)
+        // HEJEHEJEHEJ
+       public double Subtract(double a, double b)
         {
             return a - b; 
         }
