@@ -16,14 +16,14 @@ namespace Calculator
         {
             double result = a + b;
             Accumulator = result;
-            return result; 
+            return result;
         }
-        
+
         public double Subtract(double a, double b)
         {
             double result = a - b;
             Accumulator = result;
-            return result;  
+            return result;
         }
 
         public double Multiply(double a, double b)
@@ -35,22 +35,23 @@ namespace Calculator
 
         public double Power(double x, double exp)
         {
-            
-                double result = Math.Pow(x, exp);
-                Accumulator = result;
-                return result;
+
+            double result = Math.Pow(x, exp);
+            Accumulator = result;
+            return result;
         }
 
         public double Divide(double dividend, double divisor)
         {
             if (divisor == 0)
             {
+
                 return Double.NaN;
             }
 
             double result = dividend / divisor;
             Accumulator = result;
-            return result;            
+            return result;
         }
 
         public double Sqrt(double a)
@@ -63,7 +64,7 @@ namespace Calculator
             double result = Math.Sqrt(a);
             Accumulator = result;
             return result;
-            
+
 
         }
 

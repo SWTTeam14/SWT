@@ -83,13 +83,9 @@ namespace Calculator.Test.Unit
         {
             Assert.Throws<Exception>(() => uut.Sqrt(-5));
         }
-
-
-
+        
         // Testing exception
-
-
-
+        
         [TestCase(6, 4, 10)]
         public void AccumulateAddition(double a, double b, double c)
         {
