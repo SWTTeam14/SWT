@@ -55,20 +55,15 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Power(a,b), Is.EqualTo(c));
         }
 
-        [TestCase(2, 0, double.NaN)]
+        [TestCase(-6, 2, -3)]
         [TestCase(2, 2, 1)]
         [TestCase(10, 2, 5)]
-
         public void Divide(double a, double b, double c)
         {
             Assert.That(uut.Divide(a,b), Is.EqualTo(c));
         }
 
-        [Test]
-        public void DivideException()
-        {
-            Assert.Throws<Exception>(() => uut.Divide(2,0));
-        }
+
 
         [TestCase(4,2)]
         [TestCase(49,7)]
@@ -78,14 +73,20 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Sqrt(a), Is.EqualTo(b));
         }
 
+        // Testing exceptions:
         [Test]
         public void SqrtException()
         {
             Assert.Throws<Exception>(() => uut.Sqrt(-5));
         }
-        
-        // Testing exception
-        
+
+        [Test]
+        public void DivideException()
+        {
+            Assert.Throws<Exception>(() => uut.Divide(2, 0));
+        }
+
+
         [TestCase(6, 4, 10)]
         public void AccumulateAddition(double a, double b, double c)
         {
@@ -136,6 +137,13 @@ namespace Calculator.Test.Unit
             Assert.That(uut.AcPower(d), Is.EqualTo(25));
         }
 
+        [TestCase(16,4)]
+        public void AccumulateSqrt(double a, double b)
+        {
+            Assert.That(uut.Sqrt(a), Is.EqualTo(b));
+            Assert.That(uut.AcSqrt(), Is.EqualTo(2));
+            
+        }
 
 
     }

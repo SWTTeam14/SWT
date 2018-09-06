@@ -4,6 +4,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 
 
 namespace Calculator
@@ -45,8 +46,9 @@ namespace Calculator
         {
             if (divisor == 0)
             {
+                Clear();
+                throw new Exception("");
 
-                return Double.NaN;
             }
 
             double result = dividend / divisor;
@@ -64,8 +66,6 @@ namespace Calculator
             double result = Math.Sqrt(a);
             Accumulator = result;
             return result;
-
-
         }
 
         public double Accumulator
@@ -76,9 +76,6 @@ namespace Calculator
                 _accumulator = value;
             }
         }
-
-
-
 
         public void Clear()
         {
