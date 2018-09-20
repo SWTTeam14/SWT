@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "CalculatorUni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Test.Unit", "Calculator.Test.Unit\Calculator.Test.Unit.csproj", "{25CCFEF2-93DF-40B4-B8EE-CA1477C08ECD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0D724674-5521-4F79-A012-A53EA5E2E394}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{691E3BE8-4546-4071-B1EE-A2C89A1EF11A}"
 	ProjectSection(SolutionItems) = preProject
-		dotCoverCoverageConfig.xml = dotCoverCoverageConfig.xml
+		Calculator.Test.Unit\dotCoverCoverageConfig.xml = Calculator.Test.Unit\dotCoverCoverageConfig.xml
 	EndProjectSection
 EndProject
 Global
