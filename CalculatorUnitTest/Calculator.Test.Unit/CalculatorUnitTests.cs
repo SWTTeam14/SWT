@@ -11,7 +11,7 @@ namespace Calculator.Test.Unit
     [TestFixture]
     public class CalculatorUnitTests
     {
-        //DERP1
+        //DERP2
         private Calculator uut;
         [SetUp]
         public void Setup()
