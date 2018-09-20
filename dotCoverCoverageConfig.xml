@@ -3,9 +3,9 @@
 C:\Program Files (x86)\NUnit.org\nunit-console\nunit3-console.exe
 </TargetExecutable>
 <TargetArguments>
-bin\Debug\Calculator.Unit.Test.dll --result:TestResult.xml
+SWT\CalculatorUnitTest\Calculator.Test.Unit\bin\Debug\Calculator.Test.Unit.dll --result:TestResult.xml
 </TargetArguments>
-<TargetWorkingDir>Calculator.Unit.Test</TargetWorkingDir>
+<TargetWorkingDir>Calculator.Test.Unit</TargetWorkingDir>
 <TempDir>
 <!--
  Directory for the auxiliary files. Set to system temp by default. 
